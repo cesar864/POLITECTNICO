@@ -4,45 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="../styles/estilo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <h1>GYM POLITÉCNICO GRANCOLOMBIANO</h1>
-        <p>Te ofrecemos una mejor calidad de vida.</p>
-        <nav>
-            <ul>
-                <li><a href="home.html">Inicio</a></li>
-                <li><a href="registrousuarios.html">Registro</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    
     <main>
-        <section class="servicios">
-            <h2>Servicios Destacados</h2>
-            <div class="servicio">
-                <img src="profesores personalizados.jpg" alt="Servicio 1">
-                <h3>Entrenamiento Personalizado</h3>
-                <p>Tenemos profesores altamente capacitados con magister en educación física.</p>
-            </div>
-            <div class="servicio">
-                <img src="zumba.jpg" alt="Servicio 2">
-                <h3>Clases de Zumba Grupales</h3>
-                <p>Nuestras clases de zumba están disponibles de 0700R a 0800R - 1700R a 1800R.</p>
-            </div>
-            <div class="servicio">
-                <img src="nutrición.jpg" alt="Servicio 3">
-                <h3>Plan de Alimentación</h3>
-                <p>Te ofrecemos un plan de alimentación para bajar de peso y/o ganar masa muscular.</p>
-            </div>
-        </section>
-
+        
         <section class="testimonios">
             <h2>Testimonios de Clientes</h2>
             
-            <div class="testimonios-lista">
+            <div class="testimonios">
                 <blockquote>
                     <p>"Este servicio cambió mi vida. ¡Altamente recomendado!"</p>
                     <cite>- Cliente Satisfecho</cite>
@@ -63,8 +35,7 @@
                 <input type="text" id="nombre" name="nombre" required>
         
                 <label for="testimonio">Tu Testimonio:</label>
-                <textarea id="testimonio" name="testimonio" rows="4" required></textarea>
-        
+                <textarea id="testimonio" name="testimonio" rows="1" required></textarea>
                 <button type="submit">Enviar Testimonio</button>
             </form>
         </section>
@@ -72,8 +43,8 @@
         <section class="cta">
             <h2>¿Listo para empezar?</h2>
             <p>Contáctanos hoy mismo para más información.</p>
-            <a href="contacto.html" class="btn">Contáctanos</a>
-            <a href="registrousuarios.html" class="btn">Regístrate Ahora</a>
+            <a href="../components/contacto.html" class="btn">Contáctanos</a>
+            <a href="../components/registrousuarios.html" class="btn">Regístrate Ahora</a>
         </section>
     </main>
 
@@ -83,12 +54,15 @@
         <p>Email: gympolitecnico@poligram.com</p>
         <p>Dirección: Carrera 6 No 32-11, Bogotá D.C.</p>
         <div class="redes-sociales">
-            <a href="#">Facebook @GymPoli</a>
+            <a href="facebook.com">Facebook @GymPoli</a>
             <a href="#">Twitter @Gym_Poli</a>
             <a href="#">Instagram @Poli_Gym</a>
             <a href="#">WhatsApp 321 475 8426</a>
         </div>
         <p>&copy; 2024 Gympolitecnico S.A.S. Todos los derechos reservados.</p>
     </footer>
+        <script src="../components/hero.js"></script>
+        <script src="../components/header.js"></script>
+        <script src="https://kit.fontawesome.com/d48a53e01e.js" crossorigin="anonymous"></script>
 </body>
 </html>
