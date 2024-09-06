@@ -1,0 +1,218 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 11px;
+  text-align: center;
+}
+p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+.header {
+  width: 100%;
+  background-color: #343a40;
+  padding: 10px 0;
+  color: #fff;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.navbar {
+  margin-left: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+main {
+  padding: 40px;
+  background: #fff;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 1200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonios,
+.cta {
+  margin-bottom: 10px;
+}
+
+.testimonios blockquote {
+  border-left: 4px solid #333;
+  padding-left: 10px;
+  margin: 10px 0;
+}
+
+.cta {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #333;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.redes-sociales a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+.service {
+  display: inline-block;
+  width: 90%;
+  text-align: center;
+  margin: 30px;
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .servicio {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.testimonios-lista blockquote {
+  background-color: #f9f9f9;
+  border-left: 4px solid #28a745;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonios blockquote p {
+  font-style: italic;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 40px 0;
+  background: #333;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.redes-sociales a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+  color: #28a745;
+}
+
+main,
+footer {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+  border-radius: 30px;
+  margin: 10px;
+  align-items: center;
+}
+
+.title {
+}
+
+/* Asegúrate de que hero ocupe el 100% del ancho */
+.hero {
+  width: 100%;
+  background-color: #f8f9fa; /* Ajusta el color de fondo si es necesario */
+  padding: 20px 0; /* Agrega padding para asegurar que el contenido no esté pegado a los bordes */
+  text-align: center; /* Centra el texto */
+}
+
+.divs-content {
+  max-width: 1200px; /* Ajusta el ancho máximo del contenedor si lo deseas */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
