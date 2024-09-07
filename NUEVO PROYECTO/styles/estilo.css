@@ -18,8 +18,10 @@ p {
 .header {
   width: 100%;
   background-color: #343a40;
-  padding: 10px 0;
+  padding: -20px 0;
   color: #fff;
+  position: fixed;
+  z-index: 1000; /* Asegúrate de que la navbar esté por encima de otros elementos */
 }
 
 .header-content {
@@ -29,6 +31,7 @@ p {
 }
 .navbar {
   margin-left: auto;
+  display: block;
 }
 
 nav ul {
@@ -37,6 +40,7 @@ nav ul {
 }
 
 nav ul li {
+  position: relative;
   display: inline;
   margin: 0 15px;
 }
@@ -50,23 +54,30 @@ main {
   background: #fff;
   margin: 20px auto;
   border-radius: 8px;
-  max-width: 1200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .testimonios,
 .cta {
-  margin-bottom: 10px;
+  width: 100%; /* Ocupa el 100% del ancho de la pantalla */
+  max-width: none; /* Evita cualquier límite de ancho */
+  padding: 20px; /* Ajusta el relleno si es necesario */
+  margin: 0 auto; /* Centra el contenido */
+  background-color: #f6f6f6; /* Ajusta el color de fondo */
+  box-sizing: border-box;
 }
 
 .testimonios blockquote {
   border-left: 4px solid #333;
   padding-left: 10px;
   margin: 10px 0;
+  max-width: 800px; /* Ajusta el ancho máximo para mejor visualización */
+  margin: 0 auto;
 }
 
 .cta {
   text-align: center;
+  width: 100%;
 }
 
 .btn {
@@ -115,7 +126,7 @@ nav ul li a:hover {
 }
 .service {
   display: inline-block;
-  width: 90%;
+  width: 100%;
   text-align: center;
   margin: 30px;
   transition: transform 0.3s ease;
@@ -133,17 +144,19 @@ nav ul li a:hover {
 }
 
 .testimonios-lista blockquote {
-  background-color: #f9f9f9;
-  border-left: 4px solid #28a745;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #333;
+  padding-left: 10px;
+  margin: 10px 0;
+  max-width: 800px; /* Ajusta el ancho máximo para mejor visualización */
+  margin: 0 auto; /* Centra los blockquotes dentro de la sección */
 }
 
 .testimonios blockquote p {
-  font-style: italic;
-  color: #555;
+  border-left: 4px solid #333;
+  padding-left: 10px;
+  margin: 10px 0;
+  max-width: 800px; /* Ajusta el ancho máximo para mejor visualización */
+  margin: 0 auto; /* Centra los blockquotes dentro de la sección */
 }
 
 .btn {
@@ -161,36 +174,85 @@ nav ul li a:hover {
   background-color: #218838;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+/*Footer Section*/
 footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
   text-align: center;
-  padding: 40px 0;
-  background: #333;
-  color: white;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.redes-sociales a {
-  margin: 0 15px;
-  color: white;
+footer h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.redes-sociales .social-link {
+  color: #fff;
   text-decoration: none;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
+  font-size: 18px;
 }
 
-.redes-sociales a:hover {
-  color: #28a745;
+.redes-sociales .social-link i {
+  margin-right: 8px;
 }
 
-main,
-footer {
+.redes-sociales .social-link:hover {
+  color: #0d6efd; /* Efecto hover */
+}
+
+footer p:last-child {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  footer h3 {
+    font-size: 20px;
+  }
+
+  .redes-sociales {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .redes-sociales .social-link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 15px 0;
+  }
+
+  footer h3 {
+    font-size: 18px;
+  }
+
+  .redes-sociales .social-link {
+    font-size: 14px;
+  }
+}
+
+main {
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1200px;
   width: 100%;
+  height: auto;
 }
 
 .logo {
@@ -201,15 +263,22 @@ footer {
   align-items: center;
 }
 
-.title {
-}
-
-/* Asegúrate de que hero ocupe el 100% del ancho */
+/*Hero Section*/
 .hero {
   width: 100%;
-  background-color: #f8f9fa; /* Ajusta el color de fondo si es necesario */
-  padding: 20px 0; /* Agrega padding para asegurar que el contenido no esté pegado a los bordes */
-  text-align: center; /* Centra el texto */
+  height: auto;
+  background-image: url("../images/GymInicio.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 150px 0; /* Agrega padding para asegurar que el contenido no esté pegado a los bordes */
+  color: white;
+}
+.title {
+  font-size: 40px;
+  filter: brightness(1.95);
+  color: #7d7f7d;
+  padding-bottom: 150px;
 }
 
 .divs-content {
