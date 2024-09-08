@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nombre": "Admin",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "rol": "administrador"
+    },
+    {
+      "id": 2,
+      "nombre": "Viewer",
+      "email": "viewer@example.com",
+      "password": "viewer123",
+      "rol": "visualizador"
+    },
+    {
+      "id": "386c",
+      "nombre": "admin",
+      "email": "admin@gmail.com",
+      "password": "1234",
+      "rol": "administrador"
+    },
+    {
+      "id": "74a4",
+      "nombre": "viewer",
+      "email": "viewer@gmail.com",
+      "password": "1234",
+      "rol": "visualizador"
+    }
+  ]
+}
