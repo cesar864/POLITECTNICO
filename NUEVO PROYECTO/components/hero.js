@@ -8,35 +8,34 @@ document.addEventListener("DOMContentLoaded", function () {
       <br/><br/>
       <h2 class="title">POLI GYM</h2>
       <p class=" parrafoLogo" " >Libera tu potencial físico</p>
-      <br/>
 <a href="./registrousuarios.html" class="btn btn-info btn-sm">Registrate</a>
     </div>
   `;
 
   // Sección de Servicios (Íconos y textos)
   const servicesSection = document.createElement("section");
-  servicesSection.className = "services-section";
-  servicesSection.id = "servicesSection";
+  servicesSection.className = "service";
+  servicesSection.id = "service";
   servicesSection.innerHTML = `    
     <div class="container services-content">
       <div class="row">
         <div class="col-md-4">
           <div class="service">
-            <i class="fas fa-dumbbell fa-5x"></i>
-            <h3>Entrenamiento Personalizado</h3>
+<i class="fa fa-dumbbell"></i>
+                <h5 class="py-2">Entrenamiento Personalizado</h5>
           </div>
         </div>
         <div class="col-md-4">
           <div class="service">
-            <i class="fas fa-users fa-5x"></i>
-            <h3>Clases de Zumba Grupales</h3>
+            <i class="fas fa-users fa-5x ml-3"></i>
+            <h5 class="py-2">Clases  Grupales</h5>
           </div>
         </div>
         <div class="col-md-4">
           <div class="service">
             <i class="fas fa-apple-alt fa-5x"></i>
             <br/>
-            <h3>Plan de Alimentación</h3>
+            <h5 class="py-2">Plan de Alimentación</h5>
           </div>
         </div>
       </div>
