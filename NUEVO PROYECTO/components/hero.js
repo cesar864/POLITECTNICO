@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <br/><br/>
       <h2 class="title">POLI GYM</h2>
       <p class=" parrafoLogo" " >Libera tu potencial físico</p>
+      <br/>
 <a href="./registrousuarios.html" class="btn btn-info btn-sm">Registrate</a>
     </div>
   `;
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   servicesSection.className = "service";
   servicesSection.id = "service";
   servicesSection.innerHTML = `    
-    <div class="container services-content">
+    <div class="container" service">
       <div class="row">
         <div class="col-md-4">
           <div class="service">
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="col-md-4">
           <div class="service">
-            <i class="fas fa-users fa-5x ml-3"></i>
+            <i class="fas fa-users fa-5x"></i>
             <h5 class="py-2">Clases  Grupales</h5>
           </div>
         </div>
