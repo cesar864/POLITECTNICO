@@ -5,147 +5,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"><link rel="stylesheet" href="../styles/estilo.css">
+    <link rel="stylesheet" href="../styles/estilo.css">
+
     <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Arial', sans-serif;
-        }
-
-        header {
-            background-color: #343a40;
-            color: white;
-            padding: 20px 0;
-        }
-
-        header h1 {
-            text-align: center;
-            margin: 0;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            color: #ffc107;
-        }
-
-        main {
-            margin: 30px auto;
-            max-width: 600px;
-        }
-
-        .form-group label {
-            font-weight: bold;
-        }
-
-        .form-container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        textarea {
-            resize: none;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #343a40;
-            color: white;
-            margin-top: 50px;
-        }
-
-        .redes-sociales a {
-            margin: 0 10px;
-            color: #ffc107;
-            text-decoration: none;
-        }
-
-        .redes-sociales a:hover {
-            color: white;
-        }
-
-        button[type="submit"] {
-            background-color: #007bff;
-            border: none;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #0056b3;
-        }
+      
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Contacto - GYM POLITÉCNICO GRANCOLOMBIANO</h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">Inicio</a></li>
-                <li><a href="registrousuarios.html">Registro</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+    <header style="padding: 0%;">
+    <div class="header-content">
+        <div class="d-flex w-100 align-items-right">
+            <!-- Logo -->
+            <a href="../components/home.html" class="navbar-brand">
+                <i class="fa fa-dumbbell fa-2x ml-3 " style="color: #57cc99;"></i>
+            </a>
+            <h2 class="subtitle mt-3">POLI GYM</h2>
+    
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark ml-auto">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../components/home.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../components/home.html#testimonios">Testimonios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../components/home.html#heroSection">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../components/contacto.html">Contactanos</a>
+                        </li>
+                        <li class="nav-item ml-5">
+                            <a class="btn btn-info btn-sm px-5 py-1 nav-link" style="background-color: #57cc99;" type="button"
+                                href="../components/login.html">Prueba gratis</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
     </header>
 
     <main>
+        <div class="contact-info">
+            <h2>Contáctanos</h2>
+            <p><i class="fa fa-location-dot"></i> &nbsp;&nbsp;Carrera 6 No 32-11, Bogotá D.C.</p>
+            <p><i class="fa fa-phone"></i> &nbsp;&nbsp;(320) 877-9684</p>
+            <p><i class="fa fa-envelope"></i>&nbsp;&nbsp; Gympolitecnico@poligram.com</p>
+            <img src="../images/contacto.jpg" alt="Imagen de contacto"
+                style="width: 150%; max-width: 900px; height: 120px; max-height: 200px; padding-bottom: 20px; margin-right: 100px;">
+            <div class="redes-sociales">
+                <i class="fa fa-instagram fa-3x " style="color:#57cc99;"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-brands fa-twitter fa-3x" style="color:#57cc99;"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-brands fa-whatsapp fa-3x"style="color:#57cc99;"></i>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
         <div class="form-container">
-            <h2 class="text-center mb-4">Envíanos un Mensaje</h2>
             <form action="#" method="post">
                 <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
+                    <input type="email" id="email" name="email" placeholder="Tu email" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" class="form-control" rows="5" required></textarea>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono" required>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                <div class="form-group">
+                    <textarea  id="mensaje" name="mensaje" rows="5" placeholder="Tu mensaje"  required style="border: 1px solid #f6f6f6;"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-success btn-sm btn-block" style="background-color:#57cc99; width: 200px;">Enviar</button>
             </form>
         </div>
     </main>
 
-    <footer>
-        <h3>Información de Contacto</h3>
-        <p>Teléfono: (321) 475-8426</p>
-        <p>Email: gympolitecnico@poligram.com</p>
-        <p>Dirección: Carrera 6 No 32-11, Bogotá D.C.</p>
-        <div class="redes-sociales">
-            <a href="#">Facebook @GymPoli</a>
-            <a href="#">Twitter @Gym_Poli</a>
-            <a href="#">Instagram @Poli_Gym</a>
-            <a href="#">WhatsApp 321 475 8426</a>
-        </div>
-        <p>&copy; 2024 Gympolitecnico S.A.S. Todos los derechos reservados.</p>
-    </footer>
-
     <!-- JS de Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/d48a53e01e.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

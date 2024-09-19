@@ -1,7 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #f4f4f4;
-  color: #333;
   line-height: 1.6;
 }
 h1,
@@ -16,24 +15,27 @@ p {
   margin-bottom: 20px;
 }
 /*Header seciton*/
+.iconoPrincipal {
+  color: #28a745;
+}
 .header {
   width: 100%;
   background-color: #343a40;
-  padding: -10px 0;
-  color: #f6f6f6;
+  padding: 0 0;
+  color: white;
   position: fixed;
-  z-index: 1000; /* Asegúrate de que la navbar esté por encima de otros elementos */
+  z-index: 1000;
+  filter: brightness(1);
 }
 .subtitle {
   font-weight: 900;
   font-size: 20px;
   letter-spacing: 1px;
 }
-.parrafoLogo {
-}
 
 header h1 {
   font-size: 2.5rem;
+  color: white;
 }
 
 header p {
@@ -42,8 +44,7 @@ header p {
 }
 
 .header-content {
-  max-width: 1200px;
-  margin: 0 auto;
+  margin-left: 30px;
   padding: 0 0px;
 }
 
@@ -52,6 +53,7 @@ header p {
   display: block;
   justify-content: flex-end;
 }
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -63,20 +65,40 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
   padding: 50px;
   transition: background-color 0.3s ease-in-out;
 }
-nav ul li a:hover {
-  background-color: #555;
-  border-radius: 5px;
+
+.nav-link {
+  color: white !important; /* important para sobreescribir a bootstrap */
+  position: relative;
+  transition: color 0.3s ease;
 }
+
+.nav-link:hover {
+  color: #28a745 !important; /* important para sobreescribir a bootstrap*/
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #28a745;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
 main {
   padding: 40px;
   background: #fff;
   margin: 20px auto;
-  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -133,16 +155,17 @@ footer {
 }
 /*Servies */
 .service {
-  margin-top: 15px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 10px; /* Espacio entre el icono y el texto */
+  padding: 20px;
 }
 
 .service i {
-  font-size: 4rem;
-  color: #17a2b8;
+  font-size: 3rem;
+  color: #000;
+  display: flex;
 }
 
 .service h3 {
@@ -278,6 +301,7 @@ main {
 .parrafoLogo {
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
+  padding-top: 40px;
 }
 .logo {
   width: 50px;
@@ -293,17 +317,18 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 190px; /* Agrega padding para asegurar que el contenido no esté pegado a los bordes */
+  padding: 150px; /* Agrega padding para asegurar que el contenido no esté pegado a los bordes */
   color: white;
+  display: flex;
 }
 .hero-content {
-  padding-left: 10px; /* Distancia desde el borde izquierdo */
+  margin-top: 50px;
 }
 .hero .title {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 900;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-align: left;
 }
 .hero .btn {
@@ -319,7 +344,148 @@ main {
   margin-bottom: 20px;
 }
 
-.divs-content {
-  max-width: 1200px;
-  margin: 0 auto;
+/*contacto*/
+body {
+  background-color: black;
+  color: white;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #28a745;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente en pantallas pequeñas */
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+  background-color: black;
+}
+
+/* Sección de Contacto */
+.contact-info {
+  max-width: 400px;
+  padding-right: 30px;
+  margin-right: 200px;
+  padding-top: 80px;
+}
+
+.contact-info h2 {
+  font-size: 3rem;
+  color: #57cc99;
+  font-weight: 800px;
+  letter-spacing: 2px;
+  padding-bottom: 40px;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
+  padding-bottom: 10px;
+}
+
+.contact-info img {
+  max-width: 100px;
+  margin: 20px 0;
+}
+
+.form-container {
+  max-width: 600px;
+  padding-left: 30px;
+  padding-right: 100px;
+  margin-left: 50px;
+  padding-top: 40px;
+}
+
+/* Estilos para inputs y textarea */
+.form-group input,
+.form-group textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  width: 400px;
+  color: white;
+  border-radius: 0;
+  outline: none;
+  margin-bottom: 25px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  box-shadow: none;
+  border-bottom: 1px solid #28a745;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ccc;
+}
+
+textarea {
+  resize: none;
+}
+
+button[type="submit"] {
+  background-color: #57cc99;
+  border: none;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Línea divisoria entre secciones */
+.divider {
+  width: 1px;
+  background-color: white;
+  height: 300px;
+  /* Para que la línea sea del tamaño del contenido */
+  margin: 0 30px;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .contact-info,
+  .form-container {
+    max-width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .divider {
+    display: none;
+    /* Ocultar la línea divisoria en pantallas pequeñas */
+  }
 }
