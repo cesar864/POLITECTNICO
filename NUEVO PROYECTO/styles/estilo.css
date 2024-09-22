@@ -15,8 +15,18 @@ p {
   margin-bottom: 20px;
 }
 /*Header seciton*/
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745 !important;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+}
 .iconoPrincipal {
   color: #28a745;
+  font-size: 40px !important;
 }
 .header {
   width: 100%;
@@ -28,9 +38,10 @@ p {
   filter: brightness(1);
 }
 .subtitle {
-  font-weight: 900;
+  font-weight: bold;
   font-size: 20px;
   letter-spacing: 1px;
+  color:white;
 }
 
 header h1 {
@@ -103,39 +114,109 @@ main {
 }
 
 /*Testimonios section*/
+#testimonio-imagen{
+    width: 20vw; /* La imagen ocupará el 50% del ancho de la ventana */
+  height: auto; /* Mantiene las proporciones */
 
+
+
+}
+.h1-testimonio{
+
+  color: #000;
+  font-size: 50px;
+  font-weight: bold;  
+
+}
+.btn-testimonio{
+    padding-left: 150px!important;
+    padding-right: 150px!important;
+    color: #000 !important;
+}
+.footer-testimonio{
+  background-color: #f6f6f6;
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
+  padding: 50px;
+  margin-left: calc(-50vw + 50%); /* Compensa el padding lateral */
+  position: relative;
+
+}
+
+.titulo-testimonio{
+  font-weight: bold;
+  color: #28a745;
+  font-size: 3.5em
+}
 .testimonios,
 .cta {
-  width: 100%; /* Ocupa el 100% del ancho de la pantalla */
-  max-width: none; /* Evita cualquier límite de ancho */
+    width:100vw; /* Ocupa el 100% del ancho de la pantalla */
+  max-width: 100%; /* Evita cualquier límite de ancho */
   padding: 20px; /* Ajusta el relleno si es necesario */
   margin: 0 auto; /* Centra el contenido */
-  background-color: #f6f6f6; /* Ajusta el color de fondo */
   box-sizing: border-box;
 }
 
-.testimonios blockquote {
-  border-left: 4px solid #333;
-  padding-left: 10px;
-  margin: 10px 0;
-  max-width: 800px; /* Ajusta el ancho máximo para mejor visualización */
-  margin: 0 auto;
-}
 
 .cta {
   text-align: center;
   width: 100%;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  margin: 5px;
+
+.testimonios-section img {
+  border-radius: 25px;
 }
+
+.testimonios-text {
+  font-size: 1.2em;
+  color: #333;
+  padding: 0px !important:
+}
+
+.testimonios-name {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.stars span {
+  font-size: 2.5em;
+}
+ .pagination-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pagination-controls button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .pagination-controls button:hover {
+    color: #555;
+  }
+
+  .testimonio-puntos {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .punto {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+  }
+
+  .punto.activo {
+    background-color: green;
+  }
 /*Footer section*/
 
 footer {
@@ -153,7 +234,7 @@ footer {
   color: white;
   text-decoration: none;
 }
-/*Servies */
+/*Services */
 .service {
   display: flex;
   align-items: center;
@@ -185,21 +266,7 @@ footer {
 }
 /*Testimonios section*/
 
-.testimonios-lista blockquote {
-  border-left: 4px solid #333;
-  padding-left: 10px;
-  margin: 10px 0;
-  max-width: 800px; /* Ajusta el ancho máximo para mejor visualización */
-  margin: 0 auto; /* Centra los blockquotes dentro de la sección */
-}
 
-.testimonios blockquote p {
-  border-left: 4px solid #333;
-  padding-left: 10px;
-  margin: 10px 0;
-  max-width: 800px; /* Ajusta el ancho máximo para mejor visualización */
-  margin: 0 auto; /* Centra los blockquotes dentro de la sección */
-}
 
 .btn {
   display: inline-block;
@@ -213,7 +280,7 @@ footer {
 }
 
 .btn:hover {
-  background-color: #218838;
+  background-color: #28a745;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -326,7 +393,7 @@ main {
 }
 .hero .title {
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: bold;
   color: #fff;
   margin-bottom: 15px;
   text-align: left;
@@ -346,14 +413,14 @@ main {
 
 /*contacto*/
 body {
-  background-color: black;
+  background-color: #181c14;
   color: white;
   font-family: "Arial", sans-serif;
   display: flex;
   flex-direction: column;
 }
 header {
-  background-color: #343a40;
+  background-color: #181c14;
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -390,7 +457,7 @@ main {
   justify-content: center;
   align-items: flex-start;
   padding-top: 100px;
-  background-color: black;
+  background-color: #181c14;
 }
 
 /* Sección de Contacto */
@@ -488,4 +555,64 @@ button[type="submit"]:hover {
     display: none;
     /* Ocultar la línea divisoria en pantallas pequeñas */
   }
+}
+
+/*Servicios section*/
+.services-title {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+.services-description {
+  margin-bottom: 3rem;
+  color: grey;
+}
+.service-image {
+  height: 380px !important; /* Ajusta esta altura según lo que necesites */
+  border-radius: 14px !important;
+  object-fit: cover; /* Mantiene la relación de aspecto y recorta si es necesario */
+  width: 100%; /* Asegura que la imagen se ajuste al ancho del contenedor */
+  padding-right: 25px;
+}
+
+#parrafo-servicios {
+  color: grey;
+  text-align: justify-content;
+}
+#subtitulo-servicios {
+  padding-bottom: 10px;
+  text-align: left;
+  text-align: justify-content;
+}
+.services-cont{
+  padding: 70px ;
+}
+
+
+#container-services {
+  padding-top: 13% !important;
+}
+#container-services01 {
+  padding-top: 11% !important;
+}
+#container-services02 {
+  padding-top: 12% !important;
+}
+
+.nav-links-service {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  display: flex; /* Alinea los elementos horizontalmente */
+  justify-content: right; /* Centra los enlaces en la página */
+  gap: 20px; /* Espacio entre los enlaces */
+  color: #28a745;
+  padding-right: 10px;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+.nav-links-service .nav-item {
+  display: inline;
+}
+.nav-links-service .nav-link {
+  color: #28a745 !important; /* Establece el color de los enlaces */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  font-weight: bold; /* Hace que el texto del enlace sea más grueso */
+  font-size: 12px; /* Tamaño del texto */
 }

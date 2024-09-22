@@ -1,98 +1,108 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+  const testimoniosData = [
+    {
+      nombre: "Maria Hernandez ",
+      texto: "Unirse al Poli Gym ha sido transformador. Los entrenadores están bien informados y la comunidad es increíblemente comprensiva.",
+      estrellas: 5,
+      imagen: "../images/testimonio1.jpeg",
+    },
+    {
+      nombre: "Alexander Bernal",
+      texto: "Este servicio cambió mi vida. ¡Altamente recomendado!",
+      estrellas: 5,
+      imagen: "../images/testimonios2.jpeg",
+    },
+    {
+      nombre: "Michael Motivar",
+      texto: "Una experiencia increible. El equipo es muy profesional y atento.",
+      estrellas: 5,
+      imagen: "../images/testimonio3.jpeg",
+    },
+  ];
 
-    // Crear el componente de testimonios
-    const testimonials = document.createElement("section");
-    testimonials.classList.add("testimonios", "py-0", "bg-light", "text-center");
-    testimonials.id = "testimonios";
+  let currentIndex = 0;
 
-    testimonials.innerHTML = `
-        <h2 class="mb-4 mt-5">Testimonios de Clientes</h2>
-        <div class="container">
-            <div class="row" id="testimonios-list"> 
-                <!-- Testimonios agregados se mostrarán aquí -->
-            </div>
-            <h3 class="mt-5">Deja tu Testimonio</h3>
-            <form id="testimonio-form" class="form-testimonio mt-3">
-                <div class="form-group">
-                    <label for="nombre" class="sr-only">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" class="form-control mb-3" placeholder="Tu nombre" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="testimonio" class="sr-only">Tu Testimonio:</label>
-                    <textarea id="testimonio" name="testimonio" class="form-control mb-3" rows="3" placeholder="Escribe tu testimonio aquí" required></textarea>
-                </div>
-                
-                <button type="submit" class="btn btn-success btn-lg mb-5">Enviar Testimonio</button>
-            </form>
-        </div>
-    `;
+  function renderTestimonios() {
+    const testimonio = testimoniosData[currentIndex];
+    document.getElementById("testimonio-imagen").src = testimonio.imagen;
+    document.getElementById("testimonio-texto").textContent = testimonio.texto;
+    document.getElementById("testimonio-nombre").textContent = testimonio.nombre;
 
-    const main = document.querySelector("main");
-    document.body.prepend(testimonials);
+    const estrellasDiv = document.getElementById("estrellas");
+    estrellasDiv.innerHTML = "";
+    for (let i = 0; i < testimonio.estrellas; i++) {
+      const estrella = document.createElement("span");
+      estrella.classList.add("text-warning");
+      estrella.textContent = "★";
+      estrellasDiv.appendChild(estrella);
+    }
 
-    const form = document.getElementById('testimonio-form');
+    // Actualizar los puntos
+    actualizarPuntos();
+  }
 
-    // Cargar testimonios guardados de localStorage al cargar la página
-    loadTestimonios();
+  function siguienteTestimonio() {
+    currentIndex = (currentIndex + 1) % testimoniosData.length;
+    renderTestimonios();
+  }
 
-    // Escuchar el envío del formulario para agregar un nuevo testimonio
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
+  function anteriorTestimonio() {
+    currentIndex = currentIndex === 0 ? testimoniosData.length - 1 : currentIndex - 1;
+    renderTestimonios();
+  }
 
-        const nombre = document.getElementById('nombre').value;
-        const testimonio = document.getElementById('testimonio').value;
-
-        addTestimonio(nombre, testimonio);
-
-        // Guardar en localStorage
-        saveTestimonio(nombre, testimonio);
-
-        // Limpiar el formulario
-        form.reset();
+  function actualizarPuntos() {
+    const puntosDiv = document.getElementById("testimonio-puntos");
+    puntosDiv.innerHTML = "";
+    testimoniosData.forEach((_, index) => {
+      const punto = document.createElement("div");
+      punto.classList.add("punto");
+      if (index === currentIndex) {
+        punto.classList.add("activo");
+      }
+      puntosDiv.appendChild(punto);
     });
+  }
 
-    function addTestimonio(nombre, testimonio) {
-        const testimonialsList = document.getElementById('testimonios-list');
-        
-        const newTestimonio = document.createElement('div');
-        newTestimonio.classList.add('col-md-4');
-        newTestimonio.innerHTML = `
-            <blockquote class="blockquote p-4 border rounded shadow-sm">
-                <p class="mb-0">"${testimonio}"</p>
-                <footer class="blockquote-footer">${nombre}</footer>
-                <button class="btn btn-dark btn-sm mt-3 delete-btn">Eliminar</button>
-            </blockquote>
-        `;
-        
-        // Añadir la función de eliminar testimonio
-        newTestimonio.querySelector('.delete-btn').addEventListener('click', function() {
-            deleteTestimonio(newTestimonio, nombre, testimonio);
-        });
+  const testimonios = document.createElement("div");
+  testimonios.className = "testimonios";
+  testimonios.id="testimonios"
+  testimonios.innerHTML = `
 
-        testimonialsList.appendChild(newTestimonio);
-    }
+    <h1 class="mb-4 h1-testimonio">Testimonios</h1>
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-4">
+          <img id="testimonio-imagen" alt="Cliente" class="img-fluid" />
+        </div>
+        <div class="testimonios-container col-md-6 text-left">
+          <div id="estrellas" class="stars mb-2"></div>
+          <br/><br/>
+          <p id="testimonio-texto" class="testimonios-text mb-2"></p>
+          <br/><br/><br/>
+          <p id="testimonio-nombre" class="testimonios-name"></p>
+          <p>Usuario Poli Gym</p> <!-- Aquí muevo el párrafo debajo del nombre -->
+           <div class="pagination-controls">
+        <button id="anterior-btn">&lt;</button>
+        <div id="testimonio-puntos" class="testimonio-puntos"></div>
+        <button id="siguiente-btn">&gt;</button>
+      
+      </div>
+        </div>
+      </div>
+      <!-- Footer del testimonio -->
+      <div class="footer-testimonio text-center mt-4">
+        <h2 class=" titulo-testimonio   ">¡Únete a Nuestro Viaje Fit!</h2>
+        <p class="lead mt-5 mb-7">Libera tu potencial con formación personalizada y entrenamientos de última generación. ¡Contáctenos hoy <br/>para comenzar su transformación!</p>
+        <button class=" btn-testimonio btn btn-primary btn-lg mt-4 s">Prueba de 7 días</button>
+      </div>
+    </div>
+     
+    
+  `;
 
-    function saveTestimonio(nombre, testimonio) {
-        let testimonios = JSON.parse(localStorage.getItem('testimonios')) || [];
-        testimonios.push({ nombre, testimonio });
-        localStorage.setItem('testimonios', JSON.stringify(testimonios));
-    }
-
-    function loadTestimonios() {
-        const testimonios = JSON.parse(localStorage.getItem('testimonios')) || [];
-        testimonios.forEach(t => {
-            addTestimonio(t.nombre, t.testimonio);
-        });
-    }
-
-    function deleteTestimonio(element, nombre, testimonio) {
-        // Eliminar el elemento del DOM
-        element.remove();
-
-        // Eliminar de localStorage
-        let testimonios = JSON.parse(localStorage.getItem('testimonios')) || [];
-        testimonios = testimonios.filter(t => t.nombre !== nombre || t.testimonio !== testimonio);
-        localStorage.setItem('testimonios', JSON.stringify(testimonios));
-    }
+  document.body.prepend(testimonios);
+  document.getElementById("siguiente-btn").addEventListener("click", siguienteTestimonio);
+  document.getElementById("anterior-btn").addEventListener("click", anteriorTestimonio);
+  renderTestimonios();
 });
