@@ -2,236 +2,231 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuarios</title>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permite que la página se adapte a diferentes tamaños de pantalla -->
+    <title>Registro de Usuarios</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    
+    <!-- Enlace a la hoja de estilos de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <style>
+        /* Estilos personalizados para la página */
         body {
-            background-color: #f8f9fa;
-            /* Fondo claro */
-            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa; /* Fondo claro */
+            font-family: 'Arial', sans-serif; /* Tipografía de la página */
         }
 
         header {
-            background-color: #343a40;
-            color: white;
-            padding: 20px 0;
+            background-color: #343a40; /* Fondo del encabezado */
+            color: white; /* Color del texto del encabezado */
+            padding: 20px 0; /* Espaciado interno en el encabezado */
         }
 
         header h1 {
-            text-align: center;
-            margin: 0;
+            text-align: center; /* Centrar el texto del encabezado */
+            margin: 0; /* Eliminar margen del encabezado */
         }
 
         nav ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
+            list-style-type: none; /* Eliminar viñetas de la lista */
+            padding: 0; /* Eliminar padding de la lista */
+            text-align: center; /* Centrar la lista de navegación */
         }
 
         nav ul li {
-            display: inline;
-            margin: 0 10px;
+            display: inline; /* Mostrar elementos de la lista en línea */
+            margin: 0 10px; /* Margen entre elementos de la lista */
         }
 
         nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
+            color: white; /* Color del texto de los enlaces de navegación */
+            text-decoration: none; /* Eliminar subrayado de los enlaces */
+            font-weight: bold; /* Hacer que el texto de los enlaces sea negrita */
         }
 
         nav ul li a:hover {
-            color: #ffc107;
+            color: #ffc107; /* Color de los enlaces al pasar el mouse */
         }
 
         main {
-            margin: 30px auto;
-            max-width: 600px;
+            margin: 30px auto; /* Centrar el contenido principal y añadir margen superior e inferior */
+            max-width: 600px; /* Ancho máximo del contenido principal */
         }
 
         .form-group label {
-            font-weight: bold;
+            font-weight: bold; /* Negrita para las etiquetas de los campos de formulario */
         }
 
         .form-container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white; /* Fondo blanco para el contenedor del formulario */
+            padding: 30px; /* Espaciado interno del contenedor */
+            border-radius: 8px; /* Bordes redondeados del contenedor */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra del contenedor */
         }
 
         footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #343a40;
-            color: white;
-            margin-top: 50px;
+            text-align: center; /* Centrar texto del pie de página */
+            padding: 20px; /* Espaciado interno del pie de página */
+            background-color: #343a40; /* Fondo del pie de página */
+            color: white; /* Color del texto del pie de página */
+            margin-top: 50px; /* Margen superior del pie de página */
         }
 
         .redes-sociales a {
-            margin: 0 10px;
-            color: #ffc107;
-            text-decoration: none;
+            margin: 0 10px; /* Margen entre enlaces de redes sociales */
+            color: #ffc107; /* Color de los enlaces de redes sociales */
+            text-decoration: none; /* Eliminar subrayado de los enlaces */
         }
 
         .redes-sociales a:hover {
-            color: white;
+            color: white; /* Color de los enlaces de redes sociales al pasar el mouse */
         }
 
         button[type="submit"] {
-            background-color: #28a745;
-            border: none;
+            background-color: #28a745; /* Color de fondo del botón de enviar */
+            border: none; /* Sin borde para el botón de enviar */
         }
 
         button[type="submit"]:hover {
-            background-color: #218838;
+            background-color: #218838; /* Color de fondo del botón de enviar al pasar el mouse */
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Registro de Usuarios - GYM POLITÉCNICO GRANCOLOMBIANO</h1>
+        <h1>Registro de Usuarios - GYM POLITÉCNICO GRANCOLOMBIANO</h1> <!-- Título principal del encabezado -->
         <nav>
             <ul>
-                <li><a href="home.html">Inicio</a></li>
-                <li><a href="registrousuarios.html">Registro</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="home.html">Inicio</a></li> <!-- Enlace a la página de inicio -->
+                <li><a href="registrousuarios.html">Registro</a></li> <!-- Enlace a la página de registro -->
+                <li><a href="contacto.html">Contacto</a></li> <!-- Enlace a la página de contacto -->
             </ul>
         </nav>
     </header>
 
-    <!---montaje contenido react-->
-        <div id="registro"></div>
+    <!-- Contenedor para el componente de registro de usuarios de React -->
+    <div id="registro"></div>
 
-        <!-- React -->
-        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-        <!-- JS de Bootstrap -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts de React y Babel para manejar el componente -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
-<script type="text/babel">
-    const RegistroUsuarios = () => {
-        const [nombre, setNombre] = React.useState('');
-        const [email, setEmail] = React.useState('');
-        const [password, setPassword] = React.useState('');
-        const [rol, setRol] = React.useState('visualizador');
+    <!-- Scripts de jQuery y Bootstrap para la funcionalidad de la página -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
-        const handleSubmit = (e) => {
-            e.preventDefault();
-            const nuevoUsuario = 
-            { nombre, 
-                email,
-                 password, 
-                 rol };
-            console.log('Usuario registrado:', nuevoUsuario);
-            alert('Usuario registrado con éxito');
-            
-         // Lógica para enviar los datos a JSON Server
-        fetch('http://localhost:3000/users', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(nuevoUsuario)
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Usuario registrado:', data);
-                alert('Usuario registrado con éxito');
-            })
-            .catch(error => console.error('Error:', error));
-    
+    <script type="text/babel">
+        // Componente funcional de React para el registro de usuarios
+        const RegistroUsuarios = () => {
+            const [nombre, setNombre] = React.useState(''); // Estado para el nombre
+            const [email, setEmail] = React.useState(''); // Estado para el correo electrónico
+            const [password, setPassword] = React.useState(''); // Estado para la contraseña
+            const [rol, setRol] = React.useState('visualizador'); // Estado para el rol del usuario
+
+            const handleSubmit = (e) => {
+                e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+                const nuevoUsuario = { nombre, email, password, rol }; // Crear un objeto con los datos del usuario
+                console.log('Usuario registrado:', nuevoUsuario); // Imprimir en consola los datos del nuevo usuario
+                alert('Usuario registrado con éxito'); // Mostrar un mensaje de éxito
+
+                // Lógica para enviar los datos a JSON Server
+                fetch('http://localhost:3000/users', {
+                    method: 'POST', // Método HTTP para enviar datos
+                    headers: {
+                        'Content-Type': 'application/json' // Tipo de contenido
+                    },
+                    body: JSON.stringify(nuevoUsuario) // Convertir el objeto a JSON
+                })
+                .then(response => response.json()) // Convertir la respuesta a JSON
+                .then(data => {
+                    console.log('Usuario registrado:', data); // Imprimir en consola los datos del usuario registrado
+                    alert('Usuario registrado con éxito'); // Mostrar un mensaje de éxito
+                })
+                .catch(error => console.error('Error:', error)); // Manejar errores
+            };
+
+            return (
+                <div className="form-container"> <!-- Contenedor para el formulario -->
+                    <h2 className="text-center mb-4">Crear una Cuenta</h2> <!-- Título del formulario -->
+                    <form onSubmit={handleSubmit}> <!-- Evento para manejar la presentación del formulario -->
+                        <div className="form-group">
+                            <label htmlFor="nombre">Nombre:</label> <!-- Etiqueta para el campo de nombre -->
+                            <input
+                                type="text" // Tipo de campo de texto
+                                id="nombre" // ID del campo
+                                name="nombre" // Nombre del campo
+                                className="form-control" // Clase de Bootstrap para el diseño del formulario
+                                value={nombre} // Valor controlado del campo
+                                onChange={(e) => setNombre(e.target.value)} // Actualiza el estado al cambiar el valor
+                                required // Campo requerido
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="email">Correo Electrónico:</label> <!-- Etiqueta para el campo de correo electrónico -->
+                            <input
+                                type="email" // Tipo de campo de correo electrónico
+                                id="email" // ID del campo
+                                name="email" // Nombre del campo
+                                className="form-control" // Clase de Bootstrap para el diseño del formulario
+                                value={email} // Valor controlado del campo
+                                onChange={(e) => setEmail(e.target.value)} // Actualiza el estado al cambiar el valor
+                                required // Campo requerido
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="password">Contraseña:</label> <!-- Etiqueta para el campo de contraseña -->
+                            <input
+                                type="password" // Tipo de campo de contraseña
+                                id="password" // ID del campo
+                                name="password" // Nombre del campo
+                                className="form-control" // Clase de Bootstrap para el diseño del formulario
+                                value={password} // Valor controlado del campo
+                                onChange={(e) => setPassword(e.target.value)} // Actualiza el estado al cambiar el valor
+                                required // Campo requerido
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="rol">Rol:</label> <!-- Etiqueta para el campo de rol -->
+                            <select
+                                id="rol" // ID del campo
+                                name="rol" // Nombre del campo
+                                className="form-control" // Clase de Bootstrap para el diseño del formulario
+                                value={rol} // Valor controlado del campo
+                                onChange={(e) => setRol(e.target.value)} // Actualiza el estado al cambiar el valor
+                            >
+                                <option value="administrador">Administrador</option> <!-- Opción para Administrador -->
+                                <option value="visualizador">Visualizador</option> <!-- Opción para Visualizador -->
+                            </select>
+                        </div>
+
+                        <button type="submit" className="btn btn-success btn-block">Registrar</button> <!-- Botón de enviar -->
+                    </form>
+                </div>
+            );
         };
 
+        // Renderizar el componente RegistroUsuarios en el div con id "registro"
+        ReactDOM.render(<RegistroUsuarios />, document.getElementById('registro'));
+    </script>
 
-        return (
-            <div className="form-container">
-                <h2 className="text-center mb-4">Crear una Cuenta</h2>
-                <form onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <label htmlFor="nombre">Nombre:</label>
-                        <input
-                            type="text"
-                            id="nombre"
-                            name="nombre"
-                            className="form-control"
-                            value={nombre}
-                            onChange={(e) => setNombre(e.target.value)}
-                            required
-                        />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="email">Correo Electrónico:</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            className="form-control"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="password">Contraseña:</label>
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            className="form-control"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            required
-                        />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="rol">Rol:</label>
-                        <select
-                            id="rol"
-                            name="rol"
-                            className="form-control"
-                            value={rol}
-                            onChange={(e) => setRol(e.target.value)}
-                        >
-                            <option value="administrador">Administrador</option>
-                            <option value="visualizador">Visualizador</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" className="btn btn-success btn-block">
-                        Registrar
-                    </button>
-                </form>
-            </div>
-        );
-    };
-
-    ReactDOM.render(<RegistroUsuarios />, document.getElementById('registro'));
-
-</script>
-   
     <footer>
-        <h3>Información de Contacto</h3>
-        <p>Teléfono: (321) 475-8426</p>
-        <p>Email: gympolitecnico@poligram.com</p>
-        <p>Dirección: Carrera 6 No 32-11, Bogotá D.C.</p>
+        <h3>Información de Contacto</h3> <!-- Título de la sección de contacto -->
+        <p>Teléfono: (321) 475-8426</p> <!-- Información de contacto -->
+        <p>Email: gympolitecnico@poligram.com</p> <!-- Información de contacto -->
+        <p>Dirección: Carrera 6 No 32-11, Bogotá D.C.</p> <!-- Información de contacto -->
         <div class="redes-sociales">
-            <a href="#">Facebook @GymPoli</a>
-            <a href="#">Twitter @Gym_Poli</a>
-            <a href="#">Instagram @Poli_Gym</a>
-            <a href="#">WhatsApp 321 475 8426</a>
+            <a href="#">Facebook @GymPoli</a> <!-- Enlace a Facebook -->
+            <a href="#">Twitter @Gym_Poli</a> <!-- Enlace a Twitter -->
+            <a href="#">Instagram @Poli_Gym</a> <!-- Enlace a Instagram -->
+            <a href="#">WhatsApp 321 475 8426</a> <!-- Enlace a WhatsApp -->
         </div>
-        <p>&copy; 2024 Gympolitecnico S.A.S. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Gympolitecnico S.A.S. Todos los derechos reservados.</p> <!-- Aviso de copyright -->
     </footer>
-
-  
 </body>
 
 </html>
