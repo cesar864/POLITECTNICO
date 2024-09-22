@@ -1,618 +1,748 @@
+/* Estilo base para el body, se define la familia de fuentes, color de fondo y la altura de línea */
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: #f4f4f4;
-  line-height: 1.6;
+  font-family: "Roboto", sans-serif; /* Fuente Roboto con una alternativa sans-serif */
+  background-color: #f4f4f4; /* Color de fondo gris claro */
+  line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
 }
+
+/* Estilo para títulos (h1, h2, h3) */
 h1,
 h2,
 h3 {
-  font-family: "Montserrat", sans-serif;
-  margin-bottom: 11px;
-  text-align: center;
+  font-family: "Montserrat", sans-serif; /* Usando una fuente diferente para los títulos */
+  margin-bottom: 11px; /* Espacio debajo de cada título */
+  text-align: center; /* Centrando los títulos */
 }
+
+/* Estilo para párrafos */
 p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  font-size: 1.1rem; /* Tamaño de fuente relativo para el párrafo */
+  margin-bottom: 20px; /* Margen inferior entre párrafos */
 }
-/*Header seciton*/
+
+/* Sección del header */
+
+/* Estilo base para botones */
 .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #28a745 !important;
-  color: white !important;
-  text-decoration: none;
-  border-radius: 5px;
-  margin: 5px;
+  display: inline-block; /* Se comporta como un bloque en línea */
+  padding: 10px 20px; /* Relleno interno del botón */
+  background-color: #28a745 !important; /* Color de fondo verde */
+  color: white !important; /* Color de texto blanco */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  border-radius: 5px; /* Bordes redondeados */
+  margin: 5px; /* Margen alrededor del botón */
 }
+
+/* Estilo para iconos principales */
 .iconoPrincipal {
-  color: #28a745;
-  font-size: 40px !important;
+  color: #28a745; /* Color verde para los iconos */
+  font-size: 40px !important; /* Tamaño de los iconos */
 }
+
+/* Estilo para el contenedor del header */
 .header {
-  width: 100%;
-  background-color: #343a40;
-  padding: 0 0;
-  color: white;
-  position: fixed;
-  z-index: 1000;
-  filter: brightness(1);
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  background-color: #343a40; /* Color de fondo oscuro */
+  padding: 0 0; /* Sin relleno adicional */
+  color: white; /* Color del texto blanco */
+  position: fixed; /* Fijo en la parte superior de la página */
+  z-index: 1000; /* Para asegurarse que el header esté encima del contenido */
+  filter: brightness(1); /* Filtro de brillo estándar */
 }
+
+/* Estilo para subtítulos en el header */
 .subtitle {
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 1px;
-  color:white;
+  font-weight: bold; /* Texto en negrita */
+  font-size: 20px; /* Tamaño de fuente del subtítulo */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  color:white; /* Color del texto blanco */
 }
 
+/* Estilo del título h1 dentro del header */
 header h1 {
-  font-size: 2.5rem;
-  color: white;
+  font-size: 2.5rem; /* Tamaño grande para el título */
+  color: white; /* Color de texto blanco */
 }
 
+/* Estilo para párrafos dentro del header */
 header p {
-  font-size: 1.2rem;
-  margin-top: 10px;
+  font-size: 1.2rem; /* Tamaño de fuente mayor para el párrafo */
+  margin-top: 10px; /* Margen superior para separarlo de otros elementos */
 }
 
+/* Estilo para el contenido dentro del header */
 .header-content {
-  margin-left: 30px;
-  padding: 0 0px;
+  margin-left: 30px; /* Margen izquierdo para el contenido */
+  padding: 0 0px; /* Sin relleno adicional */
 }
 
+/* Estilo para la barra de navegación */
 .navbar {
-  margin-left: auto;
-  display: block;
-  justify-content: flex-end;
+  margin-left: auto; /* Empuja la barra de navegación hacia la derecha */
+  display: block; /* Se muestra como un bloque */
+  justify-content: flex-end; /* Alinea los elementos hacia la derecha */
 }
 
+/* Estilo para listas de navegación */
 nav ul {
-  list-style: none;
-  padding: 0;
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el relleno de la lista */
 }
+
+/* Estilo para los elementos de lista de navegación */
 nav ul li {
-  position: relative;
-  display: inline;
-  margin: 0 15px;
+  position: relative; /* Posición relativa para efectos adicionales */
+  display: inline; /* Muestra los elementos en línea */
+  margin: 0 15px; /* Margen entre los elementos */
 }
 
+/* Estilo para los enlaces de la barra de navegación */
 nav ul li a {
-  text-decoration: none;
-  padding: 50px;
-  transition: background-color 0.3s ease-in-out;
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  padding: 50px; /* Relleno interno de los enlaces */
+  transition: background-color 0.3s ease-in-out; /* Transición suave al cambiar el color de fondo */
 }
 
+/* Clase para los enlaces de navegación */
 .nav-link {
-  color: white !important; /* important para sobreescribir a bootstrap */
-  position: relative;
-  transition: color 0.3s ease;
+  color: white !important; /* Color de texto blanco, con importancia para sobrescribir otras reglas */
+  position: relative; /* Posicionamiento relativo para efectos */
+  transition: color 0.3s ease; /* Transición suave al cambiar el color del texto */
 }
 
+/* Efecto hover para los enlaces de navegación */
 .nav-link:hover {
-  color: #28a745 !important; /* important para sobreescribir a bootstrap*/
+  color: #28a745 !important; /* Cambia el color del texto a verde al pasar el mouse */
 }
 
+/* Efecto de subrayado animado al pasar el mouse sobre el enlace */
 .nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 3px;
-  background-color: #28a745;
-  bottom: -2px;
-  left: 0;
-  transition: width 0.3s ease;
+  content: ""; /* Pseudo-elemento vacío para crear una línea */
+  position: absolute; /* Posición absoluta */
+  width: 0; /* Ancho inicial de la línea (invisible) */
+  height: 3px; /* Altura de la línea */
+  background-color: #28a745; /* Color verde para la línea */
+  bottom: -2px; /* Posiciona la línea justo debajo del enlace */
+  left: 0; /* Inicia desde la izquierda */
+  transition: width 0.3s ease; /* Transición suave para el ancho */
 }
 
+/* Cuando el mouse pasa por encima del enlace, la línea se extiende */
 .nav-link:hover::after {
-  width: 100%;
+  width: 100%; /* La línea ocupa todo el ancho del enlace */
 }
 
+/* Estilo para el contenedor principal (main) */
 main {
-  padding: 40px;
-  background: #fff;
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px; /* Espacio interno para el contenido */
+  background: #fff; /* Fondo blanco */
+  margin: 20px auto; /* Márgenes automáticos para centrar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera alrededor del contenedor */
 }
 
-/*Testimonios section*/
+/* Sección de Testimonios */
+
+/* Estilo para imágenes de testimonio */
 #testimonio-imagen{
-    width: 20vw; /* La imagen ocupará el 50% del ancho de la ventana */
-  height: auto; /* Mantiene las proporciones */
-
-
-
+  width: 20vw; /* La imagen ocupa el 20% del ancho de la ventana */
+  height: auto; /* Mantiene las proporciones de la imagen */
 }
-.h1-testimonio{
 
-  color: #000;
-  font-size: 50px;
-  font-weight: bold;  
+/* Título de la sección de testimonios */
+.h1-testimonio {
+  color: #000; /* Color negro */
+  font-size: 50px; /* Tamaño de fuente grande */
+  font-weight: bold; /* Negrita */
+}
 
+/* Botones para testimonios */
+.btn-testimonio {
+  padding-left: 150px !important; /* Relleno izquierdo grande */
+  padding-right: 150px !important; /* Relleno derecho grande */
+  color: #000 !important; /* Color negro para el texto */
 }
-.btn-testimonio{
-    padding-left: 150px!important;
-    padding-right: 150px!important;
-    color: #000 !important;
-}
-.footer-testimonio{
-  background-color: #f6f6f6;
+
+/* Estilo para el pie de la sección de testimonios */
+.footer-testimonio {
+  background-color: #f6f6f6; /* Fondo gris claro */
   width: 100vw; /* Ocupa todo el ancho de la pantalla */
-  padding: 50px;
-  margin-left: calc(-50vw + 50%); /* Compensa el padding lateral */
-  position: relative;
-
+  padding: 50px; /* Relleno grande */
+  margin-left: calc(-50vw + 50%); /* Centra el contenido en la pantalla */
+  position: relative; /* Posición relativa */
 }
 
-.titulo-testimonio{
-  font-weight: bold;
-  color: #28a745;
-  font-size: 3.5em
+/* Título en la sección de testimonios */
+.titulo-testimonio {
+  font-weight: bold; /* Texto en negrita */
+  color: #28a745; /* Color verde */
+  font-size: 3.5em; /* Tamaño de fuente grande */
 }
+
+/* Contenedor de testimonios */
 .testimonios,
 .cta {
-    width:100vw; /* Ocupa el 100% del ancho de la pantalla */
-  max-width: 100%; /* Evita cualquier límite de ancho */
-  padding: 20px; /* Ajusta el relleno si es necesario */
-  margin: 0 auto; /* Centra el contenido */
-  box-sizing: border-box;
+  width: 100vw; /* Ocupa todo el ancho de la ventana */
+  max-width: 100%; /* Evita que el contenido supere el ancho máximo */
+  padding: 20px; /* Relleno interno */
+  margin: 0 auto; /* Márgenes automáticos para centrar */
+  box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
 }
 
-
+/* Estilo para la llamada a la acción (CTA) */
 .cta {
-  text-align: center;
-  width: 100%;
+  text-align: center; /* Texto centrado */
+  width: 100%; /* Ocupa todo el ancho */
 }
 
-
+/* Estilo para las imágenes dentro de la sección de testimonios */
 .testimonios-section img {
-  border-radius: 25px;
+  border-radius: 25px; /* Bordes redondeados */
 }
 
+/* Texto dentro de la sección de testimonios */
 .testimonios-text {
-  font-size: 1.2em;
-  color: #333;
-  padding: 0px !important:
+  font-size: 1.2em; /* Tamaño de texto */
+  color: #333; /* Color de texto gris oscuro */
+  padding: 0px !important; /* Sin relleno interno */
 }
 
+/* Nombre del autor del testimonio */
 .testimonios-name {
-  font-weight: bold;
-  font-size: 1.1em;
+  font-weight: bold; /* Negrita */
+  font-size: 1.1em; /* Tamaño del texto */
 }
 
+/* Estrellas de la sección de testimonios */
 .stars span {
-  font-size: 2.5em;
+  font-size: 2.5em; /* Tamaño de las estrellas */
 }
- .pagination-controls {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
-  }
 
-  .pagination-controls button {
-    background: none;
-    border: none;
-    font-size: 20px;
-    color: #333;
-    cursor: pointer;
-  }
+/* Controles de paginación */
+.pagination-controls {
+  display: flex; /* Alineación de los botones de paginación */
+  justify-content: flex-end; /* Alineación a la derecha */
+  align-items: center; /* Alineación vertical */
+  gap: 10px; /* Espacio entre los botones */
+}
 
-  .pagination-controls button:hover {
-    color: #555;
-  }
+/* Controles de paginación */
 
-  .testimonio-puntos {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    margin-top: 10px;
-  }
+/* Estilos para los botones de la paginación */
+.pagination-controls button {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  font-size: 20px; /* Tamaño de fuente grande */
+  color: #333; /* Color de texto gris oscuro */
+  cursor: pointer; /* El cursor cambia a puntero para indicar que es interactivo */
+}
 
-  .punto {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ddd;
-  }
+/* Efecto hover en los botones de paginación */
+.pagination-controls button:hover {
+  color: #555; /* Cambia el color del texto a un tono más claro de gris al pasar el mouse */
+}
 
-  .punto.activo {
-    background-color: green;
-  }
-/*Footer section*/
+/* Sección de puntos de paginación */
 
+/* Contenedor de los puntos de paginación (indicadores) */
+.testimonio-puntos {
+  display: flex; /* Los elementos hijos se muestran en fila */
+  justify-content: center; /* Los puntos se alinean en el centro */
+  gap: 5px; /* Espacio de 5px entre cada punto */
+  margin-top: 10px; /* Margen superior de 10px */
+}
+
+/* Estilo para los puntos de paginación */
+.punto {
+  width: 10px; /* Ancho de 10px para cada punto */
+  height: 10px; /* Alto de 10px, creando un cuadrado */
+  border-radius: 50%; /* Bordes redondeados para que los puntos sean circulares */
+  background-color: #ddd; /* Color gris claro para los puntos por defecto */
+}
+
+/* Estilo para el punto activo */
+.punto.activo {
+  background-color: green; /* Color verde para el punto activo (actual) */
+}
+
+/* Sección de pie de página (footer) */
+
+/* Estilo general para el pie de página */
 footer {
-  text-align: center;
-  padding: 20px 0;
-  background: #333;
-  color: white;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  text-align: center; /* Texto centrado */
+  padding: 20px 0; /* Relleno superior e inferior de 20px */
+  background: #333; /* Fondo gris oscuro */
+  color: white; /* Texto blanco */
+  position: relative; /* Posición relativa */
+  bottom: 0; /* Alineado en la parte inferior de la página */
+  width: 100%; /* Ocupa el ancho completo de la pantalla */
 }
 
+/* Estilo para los enlaces a redes sociales en el pie de página */
 .redes-sociales a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
+  margin: 0 10px; /* Espacio de 10px a cada lado del enlace */
+  color: white; /* Texto blanco */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
-/*Services */
+
+/* Sección de servicios */
+
+/* Contenedor de cada servicio */
 .service {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px; /* Espacio entre el icono y el texto */
-  padding: 20px;
+  display: flex; /* Los elementos hijos se muestran en fila */
+  align-items: center; /* Alinea los ítems verticalmente al centro */
+  justify-content: flex-start; /* Alinea los ítems a la izquierda */
+  gap: 10px; /* Espacio de 10px entre el icono y el texto */
+  padding: 20px; /* Espaciado interno de 20px */
 }
 
+/* Icono de cada servicio */
 .service i {
-  font-size: 3rem;
-  color: #000;
-  display: flex;
+  font-size: 3rem; /* Tamaño grande del icono */
+  color: #000; /* Color negro para el icono */
+  display: flex; /* Se asegura de que el ícono tenga un comportamiento de flexbox */
 }
 
+/* Título del servicio */
 .service h3 {
-  margin: 0;
-  font-size: 1.5rem;
+  margin: 0; /* Elimina cualquier margen por defecto */
+  font-size: 1.5rem; /* Tamaño de fuente grande */
 }
 
+/* Efecto hover en el contenedor del servicio */
 .service:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño del servicio al pasar el mouse */
 }
 
+/* Estilo para pantallas de tamaño medio */
 @media (max-width: 768px) {
   .servicio {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 100%; /* El servicio ocupa el 100% del ancho */
+    margin-bottom: 20px; /* Margen inferior de 20px entre servicios */
   }
 }
-/*Testimonios section*/
 
+/* Botones */
 
-
+/* Estilo base para los botones */
 .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  margin: 5px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block; /* Se comporta como un bloque en línea */
+  padding: 10px 20px; /* Relleno interno del botón */
+  background-color: #28a745; /* Color de fondo verde */
+  color: white; /* Texto blanco */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  border-radius: 5px; /* Bordes redondeados */
+  margin: 5px; /* Margen de 5px alrededor del botón */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para el fondo y la sombra */
 }
 
+/* Efecto hover en los botones */
 .btn:hover {
-  background-color: #28a745;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #28a745; /* Mantiene el color de fondo verde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera al pasar el mouse */
 }
 
-/*Footer Section*/
+/* Pie de página adicional */
+
+/* Estilo general para el pie de página */
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
+  background-color: #333; /* Fondo gris oscuro */
+  color: #fff; /* Texto blanco */
+  padding: 20px 0; /* Relleno superior e inferior de 20px */
+  text-align: center; /* Texto centrado */
 }
 
+/* Título en el pie de página */
 footer h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 24px; /* Tamaño de fuente grande */
+  margin-bottom: 20px; /* Espacio inferior de 20px */
 }
 
+/* Párrafos en el pie de página */
 footer p {
-  margin: 5px 0;
+  margin: 5px 0; /* Espacio vertical reducido de 5px */
 }
 
+/* Contenedor de redes sociales en el pie de página */
 .redes-sociales {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin: 20px 0;
+  display: flex; /* Los ítems se muestran en fila */
+  justify-content: center; /* Alinea los ítems al centro */
+  gap: 15px; /* Espacio de 15px entre ítems */
+  margin: 20px 0; /* Margen vertical de 20px */
 }
 
+/* Estilo para los enlaces de redes sociales */
 .redes-sociales .social-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
+  color: #fff; /* Texto blanco */
+  text-decoration: none; /* Elimina el subrayado */
+  font-size: 18px; /* Tamaño de fuente grande */
 }
 
+/* Icono en los enlaces de redes sociales */
 .redes-sociales .social-link i {
-  margin-right: 8px;
+  margin-right: 8px; /* Espacio de 8px entre el icono y el texto */
 }
 
+/* Efecto hover en los enlaces de redes sociales */
 .redes-sociales .social-link:hover {
-  color: #0d6efd; /* Efecto hover */
+  color: #0d6efd; /* Cambia el color del texto a azul al pasar el mouse */
 }
 
+/* Estilo para el último párrafo del pie de página */
 footer p:last-child {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #bbb;
+  margin-top: 20px; /* Espacio superior de 20px */
+  font-size: 14px; /* Tamaño de fuente pequeño */
+  color: #bbb; /* Texto gris claro */
 }
 
 /* Estilos responsivos */
+
+/* Estilo para pantallas de tamaño medio */
 @media (max-width: 768px) {
   footer h3 {
-    font-size: 20px;
+    font-size: 20px; /* Reduce el tamaño de la fuente del título */
   }
 
   .redes-sociales {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Los ítems se organizan en columna */
+    align-items: center; /* Centra los ítems verticalmente */
   }
 
   .redes-sociales .social-link {
-    font-size: 16px;
+    font-size: 16px; /* Reduce el tamaño de fuente en los enlaces */
   }
 }
 
+/* Estilo para pantallas de tamaño pequeño */
 @media (max-width: 480px) {
   footer {
-    padding: 15px 0;
+    padding: 15px 0; /* Reduce el relleno del pie de página */
   }
 
   footer h3 {
-    font-size: 18px;
+    font-size: 18px; /* Reduce el tamaño de la fuente del título */
   }
 
   .redes-sociales .social-link {
-    font-size: 14px;
+    font-size: 14px; /* Reduce aún más el tamaño de los enlaces de redes sociales */
   }
 }
 
+/* Contenedor principal (main) */
+
+/* Estilo para el contenedor principal de la página */
 main {
-  margin: 0 auto;
-  padding: 0 20px;
-  width: 100%;
-  height: auto;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 0 20px; /* Relleno lateral de 20px */
+  width: 100%; /* Ocupa todo el ancho */
+  height: auto; /* Altura automática */
 }
-/* logo  */
+
+/* Sección de logo */
+
+/* Estilo para el párrafo que acompaña al logo */
 .parrafoLogo {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
-  padding-top: 40px;
+  font-family: "Times New Roman", Times, serif; /* Fuente clásica */
+  font-size: 20px; /* Tamaño de fuente mediano */
+  padding-top: 40px; /* Relleno superior de 40px */
 }
+
+/* Estilo para la imagen del logo */
 .logo {
-  width: 50px;
-  height: auto;
-  border-radius: 30px;
-  align-items: center;
+  width: 50px; /* Ancho fijo de 50px */
+  height: auto; /* Altura automática para mantener las proporciones */
+  border-radius: 30px; /* Bordes redondeados */
+  align-items: center; /* Centra verticalmente en su contenedor */
 }
 
-/*Hero Section*/
+/* Sección Hero */
+
+/* Estilo para la sección Hero (banner) */
 .hero {
-  width: 100%;
-  background-image: url("../images/GymInicio.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 150px; /* Agrega padding para asegurar que el contenido no esté pegado a los bordes */
-  color: white;
-  display: flex;
+  width: 100%; /* Ocupa todo el ancho */
+  background-image: url("../images/GymInicio.jpg"); /* Imagen de fondo */
+  background-size: cover; /* La imagen cubre todo el área */
+  background-position: center; /* La imagen está centrada */
+  background-repeat: no-repeat; /* La imagen no se repite */
+  padding: 150px; /* Relleno para separar el contenido de los bordes */
+  color: white; /* Texto blanco */
+  display: flex; /* Se asegura de que el contenido interno sea flexible */
 }
+
+/* Contenedor del contenido dentro de la sección Hero */
 .hero-content {
-  margin-top: 50px;
+  margin-top: 50px; /* Margen superior de 50px */
 }
+
+/* Título dentro de la sección Hero */
 .hero .title {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 15px;
-  text-align: left;
+  font-size: 3rem; /* Tamaño de fuente grande */
+  font-weight: bold; /* Fuente en negrita */
+  color: #fff; /* Texto blanco */
+  margin-bottom: 15px; /* Margen inferior de 15px */
+  text-align: left; /* Texto alineado a la izquierda */
 }
+
+/* Botón dentro de la sección Hero */
 .hero .btn {
-  color: white;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 5px;
+  color: white; /* Texto blanco */
+  padding: 10px 20px; /* Relleno interno del botón */
+  font-size: 1.2rem; /* Tamaño de fuente mediano */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
 }
+
+/* Subtítulo dentro de la sección Hero */
 .hero .subtitle {
-  font-size: 1.5rem;
-  color: #fff;
-  margin-bottom: 20px;
+  font-size: 1.5rem; /* Tamaño de fuente mediano */
+  color: #fff; /* Texto blanco */
+  margin-bottom: 20px; /* Margen inferior de 20px */
 }
 
-/*contacto*/
+/* Estilos para la página de contacto */
+
+/* Estilo general para el cuerpo de la página */
 body {
-  background-color: #181c14;
-  color: white;
-  font-family: "Arial", sans-serif;
-  display: flex;
-  flex-direction: column;
+  background-color: #181c14; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  font-family: "Arial", sans-serif; /* Fuente sans-serif */
+  display: flex; /* Configura un contenedor flexbox */
+  flex-direction: column; /* Coloca los elementos en una columna vertical */
 }
+
+/* Estilo para el encabezado (header) */
 header {
-  background-color: #181c14;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
+  background-color: #181c14; /* Fondo oscuro igual que el cuerpo */
+  color: white; /* Texto blanco */
+  padding: 20px 0; /* Espaciado vertical de 20px */
+  text-align: center; /* Centra el texto */
 }
 
+/* Estilo para el título dentro del encabezado */
 header h1 {
-  margin: 0;
+  margin: 0; /* Elimina los márgenes alrededor del título */
 }
 
+/* Navegación */
+
+/* Estilo para la lista de navegación */
 nav ul {
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
+  list-style-type: none; /* Elimina los marcadores de lista */
+  padding: 0; /* Elimina el relleno de la lista */
+  text-align: center; /* Centra el contenido de la lista */
 }
 
+/* Estilo para cada ítem de la lista de navegación */
 nav ul li {
-  display: inline;
-  margin: 0 10px;
+  display: inline; /* Muestra los ítems en una sola línea */
+  margin: 0 10px; /* Espaciado horizontal de 10px entre cada ítem */
 }
 
+/* Estilo para los enlaces de navegación */
 nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+  color: white; /* Texto blanco */
+  text-decoration: none; /* Elimina el subrayado */
+  font-weight: bold; /* Fuente en negrita */
 }
 
+/* Efecto hover para los enlaces de navegación */
 nav ul li a:hover {
-  color: #28a745;
+  color: #28a745; /* Cambia el color a verde al pasar el mouse */
 }
 
+/* Estilos generales para el contenido principal */
 main {
-  display: flex;
+  display: flex; /* Usar Flexbox para el diseño */
   flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente en pantallas pequeñas */
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 100px;
-  background-color: #181c14;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: flex-start; /* Alinea los elementos al principio en el eje vertical */
+  padding-top: 100px; /* Espaciado superior de 100px */
+  background-color: #181c14; /* Fondo oscuro */
 }
 
 /* Sección de Contacto */
+
+/* Estilos para la información de contacto */
 .contact-info {
-  max-width: 400px;
-  padding-right: 30px;
-  margin-right: 200px;
-  padding-top: 80px;
+  max-width: 400px; /* Ancho máximo de la sección */
+  padding-right: 30px; /* Relleno derecho de 30px */
+  margin-right: 200px; /* Margen derecho de 200px para separarlo del formulario */
+  padding-top: 80px; /* Relleno superior de 80px */
 }
 
+/* Estilo del título de la sección de contacto */
 .contact-info h2 {
-  font-size: 3rem;
-  color: #57cc99;
-  font-weight: 800px;
-  letter-spacing: 2px;
-  padding-bottom: 40px;
+  font-size: 3rem; /* Tamaño de fuente grande */
+  color: #57cc99; /* Color verde claro */
+  font-weight: 800px; /* Peso de la fuente (negrita) */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  padding-bottom: 40px; /* Relleno inferior de 40px */
 }
 
+/* Estilo para los párrafos de información de contacto */
 .contact-info p {
-  margin: 0.5rem 0;
-  font-size: 0.8rem;
-  padding-bottom: 10px;
+  margin: 0.5rem 0; /* Margen vertical de 0.5rem */
+  font-size: 0.8rem; /* Tamaño de fuente pequeño */
+  padding-bottom: 10px; /* Relleno inferior de 10px */
 }
 
+/* Estilo para las imágenes de la información de contacto */
 .contact-info img {
-  max-width: 100px;
-  margin: 20px 0;
+  max-width: 100px; /* Ancho máximo de 100px para la imagen */
+  margin: 20px 0; /* Espaciado vertical de 20px */
 }
 
+/* Contenedor del formulario */
 .form-container {
-  max-width: 600px;
-  padding-left: 30px;
-  padding-right: 100px;
-  margin-left: 50px;
-  padding-top: 40px;
+  max-width: 600px; /* Ancho máximo de la sección */
+  padding-left: 30px; /* Relleno izquierdo de 30px */
+  padding-right: 100px; /* Relleno derecho de 100px */
+  margin-left: 50px; /* Margen izquierdo de 50px */
+  padding-top: 40px; /* Relleno superior de 40px */
 }
 
-/* Estilos para inputs y textarea */
+/* Estilos para los inputs y textarea dentro del formulario */
 .form-group input,
 .form-group textarea {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid white;
-  width: 400px;
-  color: white;
-  border-radius: 0;
-  outline: none;
-  margin-bottom: 25px;
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  border-bottom: 1px solid white; /* Solo un borde inferior blanco */
+  width: 400px; /* Ancho fijo de 400px */
+  color: white; /* Texto blanco */
+  border-radius: 0; /* Sin bordes redondeados */
+  outline: none; /* Elimina el contorno al seleccionar */
+  margin-bottom: 25px; /* Espaciado inferior de 25px */
 }
 
+/* Estilo para el foco en inputs y textarea */
 .form-group input:focus,
 .form-group textarea:focus {
-  box-shadow: none;
-  border-bottom: 1px solid #28a745;
+  box-shadow: none; /* Sin sombra */
+  border-bottom: 1px solid #28a745; /* Borde inferior verde al enfocar */
 }
 
+/* Estilo para los placeholders (texto dentro de inputs antes de escribir) */
 input::placeholder,
 textarea::placeholder {
-  color: #ccc;
+  color: #ccc; /* Texto placeholder gris claro */
 }
 
+/* Desactiva la posibilidad de redimensionar el textarea */
 textarea {
   resize: none;
 }
 
+/* Estilo para el botón de envío del formulario */
 button[type="submit"] {
-  background-color: #57cc99;
-  border: none;
-  color: white;
+  background-color: #57cc99; /* Fondo verde claro */
+  border: none; /* Sin borde */
+  color: white; /* Texto blanco */
 }
 
+/* Efecto hover en el botón de envío */
 button[type="submit"]:hover {
-  background-color: #218838;
+  background-color: #218838; /* Fondo verde más oscuro al pasar el mouse */
 }
 
-/* Línea divisoria entre secciones */
+/* Línea divisoria entre la información de contacto y el formulario */
 .divider {
-  width: 1px;
-  background-color: white;
-  height: 300px;
-  /* Para que la línea sea del tamaño del contenido */
-  margin: 0 30px;
+  width: 1px; /* Ancho de la línea */
+  background-color: white; /* Línea de color blanco */
+  height: 300px; /* Altura de la línea */
+  margin: 0 30px; /* Espaciado horizontal de 30px */
 }
 
-/* Media Queries para responsividad */
+/* Media Queries para hacer la página responsiva */
+
+/* Estilos para pantallas de tamaño medio (menos de 768px de ancho) */
 @media (max-width: 768px) {
   .contact-info,
   .form-container {
-    max-width: 100%;
-    padding: 0;
-    text-align: center;
+    max-width: 100%; /* Ocupan todo el ancho disponible */
+    padding: 0; /* Sin relleno */
+    text-align: center; /* Centra el contenido */
   }
 
   .divider {
-    display: none;
-    /* Ocultar la línea divisoria en pantallas pequeñas */
+    display: none; /* Oculta la línea divisoria en pantallas pequeñas */
   }
 }
 
-/*Servicios section*/
+/* Sección de Servicios */
+
+/* Título de la sección de servicios */
 .services-title {
-  margin-top: 5rem;
-  margin-bottom: 2rem;
+  margin-top: 5rem; /* Margen superior grande */
+  margin-bottom: 2rem; /* Margen inferior moderado */
 }
+
+/* Descripción de los servicios */
 .services-description {
-  margin-bottom: 3rem;
-  color: grey;
+  margin-bottom: 3rem; /* Margen inferior grande */
+  color: grey; /* Texto gris */
 }
+
+/* Estilo para las imágenes de los servicios */
 .service-image {
-  height: 380px !important; /* Ajusta esta altura según lo que necesites */
-  border-radius: 14px !important;
-  object-fit: cover; /* Mantiene la relación de aspecto y recorta si es necesario */
-  width: 100%; /* Asegura que la imagen se ajuste al ancho del contenedor */
-  padding-right: 25px;
+  height: 380px !important; /* Altura fija de 380px */
+  border-radius: 14px !important; /* Bordes redondeados */
+  object-fit: cover; /* La imagen se ajusta manteniendo su relación de aspecto */
+  width: 100%; /* Ancho completo */
+  padding-right: 25px; /* Relleno derecho de 25px */
 }
 
+/* Párrafo de la sección de servicios */
 #parrafo-servicios {
-  color: grey;
-  text-align: justify-content;
+  color: grey; /* Texto gris */
+  text-align: justify-content; /* Justificación del texto */
 }
+
+/* Subtítulo de la sección de servicios */
 #subtitulo-servicios {
-  padding-bottom: 10px;
-  text-align: left;
-  text-align: justify-content;
-}
-.services-cont{
-  padding: 70px ;
+  padding-bottom: 10px; /* Relleno inferior de 10px */
+  text-align: left; /* Alineación a la izquierda */
+  text-align: justify-content; /* Justificación del texto */
 }
 
+/* Contenedor general de los servicios */
+.services-cont {
+  padding: 70px; /* Espaciado interno de 70px */
+}
 
+/* Contenedores individuales de servicios con diferentes rellenos superiores */
 #container-services {
   padding-top: 13% !important;
 }
+
 #container-services01 {
   padding-top: 11% !important;
 }
+
 #container-services02 {
   padding-top: 12% !important;
 }
 
+/* Navegación específica de la sección de servicios */
+
+/* Lista de enlaces de servicios */
 .nav-links-service {
   list-style-type: none; /* Elimina los puntos de la lista */
   display: flex; /* Alinea los elementos horizontalmente */
-  justify-content: right; /* Centra los enlaces en la página */
+  justify-content: right; /* Los alinea a la derecha */
   gap: 20px; /* Espacio entre los enlaces */
-  color: #28a745;
-  padding-right: 10px;
+  color: #28a745; /* Color verde */
+  padding-right: 10px; /* Relleno derecho de 10px */
   flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
+
+/* Cada ítem de navegación */
 .nav-links-service .nav-item {
-  display: inline;
+  display: inline; /* Se muestran en línea */
 }
+
+/* Estilo para los enlaces de la navegación de servicios */
 .nav-links-service .nav-link {
-  color: #28a745 !important; /* Establece el color de los enlaces */
-  text-decoration: none; /* Elimina el subrayado de los enlaces */
-  font-weight: bold; /* Hace que el texto del enlace sea más grueso */
-  font-size: 12px; /* Tamaño del texto */
+  color: #28a745 !important; /* Color verde para los enlaces */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 12px; /* Tamaño de fuente pequeño */
 }
